@@ -1,0 +1,28 @@
+version: "3.1"
+
+intents:
+  - request_recipe
+  - specify_requirements
+
+entities:
+  - dish
+  - dietary_requirement
+
+slots:
+  dish:
+    type: text
+    influence_conversation: true
+  dietary_requirements:
+    type: list
+    influence_conversation: true
+
+responses:
+  utter_ask_dish:
+    - text: "What dish would you like a recipe for?"
+  utter_ask_requirements:
+    - text: "Any dietary requirements? (e.g., vegetarian, gluten-free)"
+  utter_provide_recipe:
+    - text: "Here's your recipe for {dish}:\n{recipe}"
+
+actions:
+  - action_generate_recipe
