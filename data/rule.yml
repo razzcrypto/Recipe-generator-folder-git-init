@@ -1,0 +1,17 @@
+version: "3.1"
+
+rules:
+- rule: Ask for dish
+  steps:
+  - intent: request_recipe
+  - action: utter_ask_dish
+
+- rule: Ask for requirements
+  steps:
+  - intent: specify_requirements
+  - action: utter_ask_requirements
+
+- rule: Generate recipe
+  steps:
+  - intent: request_recipe
+  - action: action_generate_recipe
