@@ -1,0 +1,18 @@
+version: "3.1"
+
+nlu:
+- intent: request_recipe
+  examples: |
+    - How do I make [pasta]?
+    - I need a recipe for [chicken curry]
+    - Show me how to prepare [vegetable soup]
+    - Can you give me a [chocolate cake] recipe?
+    - I want to cook [beef stew] tonight
+
+- intent: specify_requirements
+  examples: |
+    - I need a [vegetarian] version
+    - Make it [gluten-free]
+    - I'd like a [low-carb] option
+    - Can you make it [spicy]?
+    - [Dairy-free] please
